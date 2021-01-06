@@ -1,0 +1,23 @@
+import * as React from 'react';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import AppBar from '@material-ui/core/AppBar/AppBar';
+import useStyles from './MainBar.styles';
+
+type Props = {
+
+};
+
+export const MainBar = (props: Props) => {
+  const classes = useStyles();
+
+  return (
+    <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+      <Toolbar className={classes.toolbar}>
+        <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+          Star Wars
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+};

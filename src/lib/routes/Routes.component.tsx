@@ -1,18 +1,27 @@
 import * as React from 'react';
+import { MainLayout } from '../ui/MainLayout';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import PlanetsRoutes from '../../app/planets/routes';
 
 type Props = {
 
 };
-type State = {
 
+const renderRoutes = () => {
+  return (
+    <MainLayout>
+      <Switch>
+        { PlanetsRoutes.map((route) => <Route {...route} />) }
+        <Redirect from="*" to="/" />
+      </Switch>
+    </MainLayout>
+  );
 };
 
-export class Routes extends React.Component<Props, State> {
-  render() {
-    return (
-      <div>
-        <span>Routes</span>
-      </div>
-    );
-  };
+export const Routes = (props: Props) => {
+  return (
+    <Router>
+      { renderRoutes() }
+    </Router>
+  );
 };
