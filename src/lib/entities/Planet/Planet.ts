@@ -14,7 +14,7 @@ export class Planet implements IPlanet {
   readonly rotation_period?: string;
   readonly terrain?: string;
   readonly residents?: string[];
-  readonly people?: IPerson[];
+  readonly people: IPerson[];
 
   constructor(data: IPlanetData) {
     this.id = Planet.getIdFromData(data);
@@ -28,7 +28,7 @@ export class Planet implements IPlanet {
     this.rotation_period = data.rotation_period;
     this.terrain = data.terrain;
     this.residents = data.residents?.map((url) => url.split('/').filter(Boolean).pop() || '');
-    this.people = data.people?.map((personData) => new Person(personData))
+    this.people = data.people?.map((personData) => new Person(personData)) || []
   }
 
   private static getIdFromData(data: IPlanetData): string {

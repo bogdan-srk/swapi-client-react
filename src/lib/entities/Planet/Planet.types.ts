@@ -16,5 +16,5 @@ export interface IPlanetData {
 
 export interface IPlanet extends IPlanetData {
   readonly id: string;
-  readonly people?: IPerson[];
+  readonly people: IPerson[];
 }

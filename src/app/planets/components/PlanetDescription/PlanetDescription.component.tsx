@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 type Props = {
   readonly climate: string;
@@ -15,8 +16,31 @@ type Props = {
 
 export const PlanetDescription = (props: Props) => {
   return (
-    <div>
-
-    </div>
+    <>
+      <Typography paragraph>
+        {`Name: ${props.name}`}
+      </Typography>
+      <Typography paragraph>
+        {`Climate: ${props.climate}`}
+      </Typography>
+      <Typography paragraph>
+        {`Population: ${props.population}`}
+      </Typography>
+      <Typography paragraph>
+        {`Diameter: ${props.diameter}`}
+      </Typography>
+      <Typography paragraph>
+        {`Gravity: ${props.gravity}`}
+      </Typography>
+      <Typography paragraph>
+        {`Orbital Period: ${props.orbital_period}`}
+      </Typography>
+      <Typography paragraph>
+        {`Rotation Period: ${props.rotation_period}`}
+      </Typography>
+      <Typography paragraph>
+        {`Terrain: ${props.terrain}`}
+      </Typography>
+    </>
   );
 };

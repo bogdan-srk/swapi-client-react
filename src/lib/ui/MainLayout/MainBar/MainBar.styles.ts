@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flexGrow: 1,
+    textDecoration: 'none',
   },
 }));
 
