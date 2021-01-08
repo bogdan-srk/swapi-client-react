@@ -1,11 +1,5 @@
-import { IPlanetData } from '../../../../lib/entities/Planet.types';
-
-export interface IFetchPlanetsData {
-  readonly count: number
-  readonly next: string
-  readonly previous: string
-  readonly results: IPlanetData[]
-}
+import { IPlanetData } from '../../../lib/entities/Planet.types';
+import { IFetchPlanetData, IFetchPlanetsData } from './PlanetsApiService.types';
 
 class PlanetsApiService {
   readonly url: string;
@@ -19,6 +13,13 @@ class PlanetsApiService {
 
     const params = { page: String(page) };
     url.search = new URLSearchParams(params).toString();
+
+    return fetch(url.toString())
+      .then((res) => res.json())
+  };
+
+  fetchPlanet(id: string): Promise<IFetchPlanetData> {
+    const url = new URL(`${this.url}${id}/`);
 
     return fetch(url.toString())
       .then((res) => res.json())

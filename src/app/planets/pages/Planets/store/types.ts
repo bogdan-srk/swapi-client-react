@@ -1,4 +1,4 @@
-import { IPlanet } from '../../../../lib/entities/Planet.types';
+import { IPlanet } from '../../../../../lib/entities/Planet.types';
 
 export enum PlanetsActionTypes {
   FETCH_REQUEST = 'PLANETS_FETCH_REQUEST',

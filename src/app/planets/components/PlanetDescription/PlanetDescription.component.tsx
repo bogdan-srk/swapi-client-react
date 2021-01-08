@@ -1,4 +1,6 @@
-export interface IPlanetData {
+import * as React from 'react';
+
+type Props = {
   readonly climate: string;
   readonly name: string;
   readonly population: string;
@@ -9,8 +11,12 @@ export interface IPlanetData {
   readonly rotation_period?: string;
   readonly terrain?: string;
   readonly residents?: string[];
-}
+};
 
-export interface IPlanet extends IPlanetData {
-  readonly id: string
-}
+export const PlanetDescription = (props: Props) => {
+  return (
+    <div>
+
+    </div>
+  );
+};

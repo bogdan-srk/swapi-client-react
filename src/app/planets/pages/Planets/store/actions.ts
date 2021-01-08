@@ -1,7 +1,8 @@
 import { PlanetsActionTypes } from './types';
-import PlanetsApiService, { IFetchPlanetsData } from '../api/PlanetsApiService';
+import PlanetsApiService from '../../../api/PlanetsApiService';
+import { action } from '../../../../../lib/store/helpers';
+import { IFetchPlanetsData } from '../../../api/PlanetsApiService.types';
 
-const action = (type: string, payload?: any) => ({type, payload});
 
 export const fetchRequest = () => action(PlanetsActionTypes.FETCH_REQUEST);
 

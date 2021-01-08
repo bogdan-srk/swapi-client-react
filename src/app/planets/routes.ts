@@ -1,5 +1,5 @@
-import { PlanetsContainer } from './Planets/Planets.container';
-import { PlanetContainer } from './Planet/Planet.container';
+import { PlanetsContainer } from './pages/Planets/Planets.container';
+import { PlanetContainer } from './pages/Planet/Planet.container';
 
 export const PLANETS_PATH = '/';
 export const PLANET_PATH = '/planets/:id';
