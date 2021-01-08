@@ -22,7 +22,7 @@ export const PlanetCard = (props: Props) => {
     <Grid item key={props.id} xs={12} sm={6} md={4}>
       <Card className={classes.card}>
         <CardContent className={classes.cardContent}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant='h5' component='h2'>
             { props.name }
           </Typography>
           <Typography>
@@ -34,8 +34,8 @@ export const PlanetCard = (props: Props) => {
         </CardContent>
         <CardActions>
           <Button
-            size="small"
-            color="primary"
+            size='small'
+            color='primary'
             to={ `/planets/${props.id}` }
             component={Link}
           >

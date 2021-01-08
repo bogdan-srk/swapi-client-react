@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Planets } from './Planets.component';
+import { PlanetsPage } from './PlanetsPage.component';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { incrementPage, loadPlanets, resetState } from './store/actions';
@@ -11,7 +11,7 @@ type Props = {
 
 };
 
-export const PlanetsContainer = (props: Props) => {
+export const PlanetsPageContainer = (props: Props) => {
   const dispatch = useDispatch();
   const planets = useSelector(selectPlanets);
   const page = useSelector(selectPlanetsPage);
@@ -33,7 +33,7 @@ export const PlanetsContainer = (props: Props) => {
       <MainBarPortal>
         <Typography>Pages loaded: { page }</Typography>
       </MainBarPortal>
-      <Planets planets={ planets } onLoadMore={ onLoadMore }/>
+      <PlanetsPage planets={ planets } onLoadMore={ onLoadMore }/>
     </>
   );
 };

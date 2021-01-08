@@ -1,10 +1,10 @@
-import { PlanetsState } from '../../app/planets/pages/Planets/store/types';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { planetsReducer } from '../../app/planets/pages/Planets/store/reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import { planetReducer } from '../../app/planets/pages/Planet/store/reducers';
-import { PlanetState } from '../../app/planets/pages/Planet/store/types';
+import { PlanetsState } from '../../app/planets/pages/PlanetsPage/store/types';
+import { PlanetState } from '../../app/planets/pages/PlanetPage/store/types';
+import { planetsReducer } from '../../app/planets/pages/PlanetsPage/store/reducers';
+import { planetReducer } from '../../app/planets/pages/PlanetPage/store/reducers';
 
 export interface ApplicationState {
   planets: PlanetsState

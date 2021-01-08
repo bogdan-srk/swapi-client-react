@@ -38,13 +38,13 @@ export const PersonCard = (props: Props) => {
           }) }
           onClick={ handleExpandClick }
           aria-expanded={ expanded }
-          aria-label="show more"
+          aria-label='show more'
         >
           <ExpandMoreIcon/>
         </IconButton>
       </CardActions>
 
-      <Collapse in={ expanded } timeout="auto" unmountOnExit>
+      <Collapse in={ expanded } timeout='auto' unmountOnExit>
         <CardContent>
           <Typography>
             Name: { props.name }

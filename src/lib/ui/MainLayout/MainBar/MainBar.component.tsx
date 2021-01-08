@@ -13,11 +13,11 @@ export const MainBar = (props: Props) => {
   const classes = useStyles();
 
   return (
-    <AppBar position="sticky" color="default" elevation={0} className={classes.appBar}>
+    <AppBar position='sticky' color='default' elevation={0} className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         <Typography
-          variant="h6"
-          color="inherit"
+          variant='h6'
+          color='inherit'
           noWrap
           className={ classes.toolbarTitle }
           component={ (props) => (<Link to={'/'} {...props} />) }

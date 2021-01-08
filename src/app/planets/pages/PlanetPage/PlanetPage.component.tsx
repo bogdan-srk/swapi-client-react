@@ -14,8 +14,8 @@ type Props = {
 export const Planet = (props: Props) => {
 
   return (
-    <Container maxWidth="lg">
-      <Typography gutterBottom variant="h5" component="h2">
+    <Container maxWidth='lg'>
+      <Typography gutterBottom variant='h5' component='h2'>
         { props.planet.name }
       </Typography>
       <Grid container spacing={5}>

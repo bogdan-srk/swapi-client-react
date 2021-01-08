@@ -11,7 +11,7 @@ export const MainBarPortal = (props: Props) => {
   const el = useRef(document.createElement('div'));
 
   useEffect(() => {
-    const portalRoot = document.querySelector("#main-bar-portal-root") as HTMLElement;
+    const portalRoot = document.querySelector('#main-bar-portal-root') as HTMLElement;
     const current = el.current;
 
     portalRoot!.appendChild(current);

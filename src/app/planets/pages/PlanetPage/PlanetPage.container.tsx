@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Planet } from './Planet.component';
+import { Planet } from './PlanetPage.component';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLoading, selectPlanet } from './store/selectors';
 import { useEffect } from 'react';
@@ -12,7 +12,7 @@ type Props = {
 
 };
 
-export const PlanetContainer = (props: Props) => {
+export const PlanetPageContainer = (props: Props) => {
   const dispatch = useDispatch();
   const {id: planetId} = useParams() as {id: string};
   const planet = useSelector(selectPlanet);

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { MainLayout } from '../ui/MainLayout';
+import { MainLayout } from '../lib/ui/MainLayout';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-import PlanetsRoutes from '../../app/planets/routes';
+import PlanetsRoutes from '../app/planets/routes';
 
 type Props = {
 
@@ -12,7 +12,7 @@ const renderRoutes = () => {
     <MainLayout>
       <Switch>
         { PlanetsRoutes.map((route) => <Route {...route} />) }
-        <Redirect from="*" to="/" />
+        <Redirect from='*' to='/' />
       </Switch>
     </MainLayout>
   );
