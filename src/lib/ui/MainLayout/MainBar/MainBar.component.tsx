@@ -12,11 +12,12 @@ export const MainBar = (props: Props) => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+    <AppBar position="sticky" color="default" elevation={0} className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
           Star Wars
         </Typography>
+        <div id={'main-bar-portal-root'} />
       </Toolbar>
     </AppBar>
   );

@@ -6,6 +6,7 @@ import { IPlanet } from '../../../../lib/entities/Planet/Planet.types';
 import { useEffect } from 'react';
 import { loadPlanet } from './store/actions';
 import { useParams } from 'react-router-dom';
+import { resetState } from './store/actions';
 
 type Props = {
 
@@ -18,7 +19,11 @@ export const PlanetContainer = (props: Props) => {
 
   useEffect(() => {
     dispatch(loadPlanet(planetId));
-  }, []);
+  }, [planetId, dispatch]);
+
+  useEffect(() => () => {
+    dispatch(resetState());
+  }, [dispatch]);
 
   return (
     <Planet planet={ planet as IPlanet} />

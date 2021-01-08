@@ -4,6 +4,7 @@ export enum PlanetActionTypes {
   FETCH_REQUEST = 'PLANET_FETCH_REQUEST',
   FETCH_SUCCESS = 'PLANET_FETCH_SUCCESS',
   FETCH_ERROR = 'PLANET_FETCH_ERROR',
+  RESET_STATE = 'PLANET_RESET_STATE',
 }
 
 export interface PlanetState {

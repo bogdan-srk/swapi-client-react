@@ -10,6 +10,8 @@ export const fetchSuccess = (data: IPlanetData) => action(PlanetActionTypes.FETC
 
 export const fetchError = (message: string) => action(PlanetActionTypes.FETCH_ERROR, message);
 
+export const resetState = () => action(PlanetActionTypes.RESET_STATE);
+
 export const loadPlanet = (id: string) => {
   return async (dispatch: any, getState: any) => {
     dispatch(fetchRequest());

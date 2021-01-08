@@ -26,10 +26,10 @@ export const PlanetCard = (props: Props) => {
             { props.name }
           </Typography>
           <Typography>
-            { props.climate }
+            Climate: { props.climate }
           </Typography>
           <Typography>
-            { props.population }
+            Population: { props.population }
           </Typography>
         </CardContent>
         <CardActions>

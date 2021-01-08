@@ -15,7 +15,7 @@ const reducer: Reducer<PlanetState> = (state = initialState, action) => {
 
     case PlanetActionTypes.FETCH_REQUEST: {
 
-      return { ...state, loading: true }
+      return { ...state, loading: true };
     }
 
     case PlanetActionTypes.FETCH_SUCCESS: {
@@ -31,12 +31,17 @@ const reducer: Reducer<PlanetState> = (state = initialState, action) => {
 
     case PlanetActionTypes.FETCH_ERROR: {
 
-      return { ...state, loading: false, errors: action.payload }
+      return { ...state, loading: false, errors: action.payload };
+    }
+
+    case PlanetActionTypes.RESET_STATE: {
+
+      return initialState;
     }
 
     default: {
 
-      return state
+      return state;
     }
   }
 };

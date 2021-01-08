@@ -12,6 +12,8 @@ export const fetchError = (message: string) => action(PlanetsActionTypes.FETCH_E
 
 export const incrementPage = () => action(PlanetsActionTypes.INCREMENT_PAGE);
 
+export const resetState = () => action(PlanetsActionTypes.RESET_STATE);
+
 export const loadPlanets = (page: number = 1) => {
   return async (dispatch: any, getState: any) => {
     dispatch(fetchRequest());

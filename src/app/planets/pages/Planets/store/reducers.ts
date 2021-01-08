@@ -47,6 +47,11 @@ const reducer: Reducer<PlanetsState> = (state = initialState, action) => {
       return { ...state, page: state.page + 1 };
     }
 
+    case PlanetsActionTypes.RESET_STATE: {
+
+      return initialState;
+    }
+
     default: {
 
       return state;
