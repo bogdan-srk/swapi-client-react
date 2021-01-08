@@ -1,4 +1,6 @@
 import { IPlanet, IPlanetData } from './Planet.types';
+import { IPerson } from '../Person/Person.types';
+import { Person } from '../Person/Person';
 
 export class Planet implements IPlanet {
   readonly id: string;
@@ -12,6 +14,7 @@ export class Planet implements IPlanet {
   readonly rotation_period?: string;
   readonly terrain?: string;
   readonly residents?: string[];
+  readonly people?: IPerson[];
 
   constructor(data: IPlanetData) {
     this.id = Planet.getIdFromData(data);
@@ -24,7 +27,8 @@ export class Planet implements IPlanet {
     this.orbital_period = data.orbital_period;
     this.rotation_period = data.rotation_period;
     this.terrain = data.terrain;
-    this.residents = data.residents;
+    this.residents = data.residents?.map((url) => url.split('/').filter(Boolean).pop() || '');
+    this.people = data.people?.map((personData) => new Person(personData))
   }
 
   private static getIdFromData(data: IPlanetData): string {

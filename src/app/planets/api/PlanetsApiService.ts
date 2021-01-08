@@ -1,5 +1,5 @@
-import { IPlanetData } from '../../../lib/entities/Planet.types';
-import { IFetchPlanetData, IFetchPlanetsData } from './PlanetsApiService.types';
+import { IFetchPlanetsData } from './PlanetsApiService.types';
+import { IPlanetData } from '../../../lib/entities/Planet/Planet.types';
 
 class PlanetsApiService {
   readonly url: string;
@@ -18,7 +18,7 @@ class PlanetsApiService {
       .then((res) => res.json())
   };
 
-  fetchPlanet(id: string): Promise<IFetchPlanetData> {
+  fetchPlanet(id: string): Promise<IPlanetData> {
     const url = new URL(`${this.url}${id}/`);
 
     return fetch(url.toString())
@@ -26,4 +26,4 @@ class PlanetsApiService {
   };
 }
 
-export default new PlanetsApiService()
+export default new PlanetsApiService();

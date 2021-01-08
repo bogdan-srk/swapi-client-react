@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 import { PlanetsActionTypes, PlanetsState } from './types';
-import { Planet } from '../../../../../lib/entities/Planet';
+import { Planet } from '../../../../../lib/entities/Planet/Planet';
 import { IFetchPlanetsData } from '../../../api/PlanetsApiService.types';
 
 const initialState: PlanetsState = {

@@ -1,3 +1,5 @@
+import { IPerson, IPersonData } from '../Person/Person.types';
+
 export interface IPlanetData {
   readonly climate: string;
   readonly name: string;
@@ -9,8 +11,10 @@ export interface IPlanetData {
   readonly rotation_period?: string;
   readonly terrain?: string;
   readonly residents?: string[];
+  readonly people?: IPersonData[];
 }
 
 export interface IPlanet extends IPlanetData {
-  readonly id: string
+  readonly id: string;
+  readonly people?: IPerson[];
 }

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Planet } from './Planet.component';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPlanet } from './store/selectors';
-import { IPlanet } from '../../../../lib/entities/Planet.types';
+import { IPlanet } from '../../../../lib/entities/Planet/Planet.types';
 import { useEffect } from 'react';
 import { loadPlanet } from './store/actions';
 import { useParams } from 'react-router-dom';

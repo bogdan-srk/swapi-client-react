@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IPlanet } from '../../../../lib/entities/Planet.types';
+import { IPlanet } from '../../../../lib/entities/Planet/Planet.types';
 import { Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';

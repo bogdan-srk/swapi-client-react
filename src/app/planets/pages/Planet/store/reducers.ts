@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 import { PlanetActionTypes, PlanetState } from './types';
-import { Planet } from '../../../../../lib/entities/Planet';
-import { IPlanetData } from '../../../../../lib/entities/Planet.types';
+import { Planet } from '../../../../../lib/entities/Planet/Planet';
+import { IPlanetData } from '../../../../../lib/entities/Planet/Planet.types';
 
 const initialState: PlanetState = {
   planet: undefined,

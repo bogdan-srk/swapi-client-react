@@ -1,5 +1,5 @@
 import { ApplicationState } from '../../../../../lib/store';
-import { IPlanet } from '../../../../../lib/entities/Planet.types';
+import { IPlanet } from '../../../../../lib/entities/Planet/Planet.types';
 
 export const selectPlanetsPage = (state: ApplicationState): number => state.planets.page;
 
